@@ -1,0 +1,60 @@
+@import "reset.scss";
+@import "updatebrowser.scss";
+@import "colors.scss";
+
+* {
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: $main-background-color;
+  font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: $main-text-color;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#canvas {
+  position: fixed;
+  z-index: 0;
+}
+
+h1.name {
+  position: absolute;
+  pointer-events: none;
+  top: 2vh;
+  z-index: 100;
+  font-size: 144px;
+}
+
+h2.description {
+  position: absolute;
+  pointer-events: none;
+  top: 21vh;
+  font-size: 89px;
+  z-index: 100;
+}
+
+input {
+  pointer-events: all;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom: dashed $main-text-color;
+  border-left-color: transparent;
+  line-height: 0.1;
+  font-size: 89px;
+  background-color: transparent;
+  color: $main-text-color;
+  font-family: inherit;
+  font-weight: inherit;
+  width: 90vw;
+  z-index: 100;
+  cursor: text !important;
+  &:focus {
+    outline: none;
+  }
+}
+
