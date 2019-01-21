@@ -19,6 +19,7 @@ const ready = (fn) => {
  */
 const init = () => {
   const canvas = document.getElementById('canvas');
+  const input = document.getElementById('occupation');
 
   canvas.width = document.body.clientWidth;
   canvas.height = document.body.clientHeight;
@@ -28,6 +29,8 @@ const init = () => {
   canvas.addEventListener('mousedown', paper.actions.draw, false);
   canvas.addEventListener('mousemove', paper.actions.draw, false);
   canvas.addEventListener('mouseup', paper.actions.draw, false);
+
+  occupation(input);
 };
 
 ready(init);
