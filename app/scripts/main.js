@@ -29,6 +29,7 @@ const init = () => {
   canvas.addEventListener('mousedown', paper.actions.draw, false);
   canvas.addEventListener('mousemove', paper.actions.draw, false);
   canvas.addEventListener('mouseup', paper.actions.draw, false);
+  document.addEventListener('mouseout', paper.actions.stop, false);
 
   occupation(input);
 };
