@@ -45,10 +45,12 @@ h2.description {
   z-index: 100;
   @media screen and (max-width: $font-break) {
     font-size: $big-font - 55px;
+    top: 13vh;
   }
 }
 
 input {
+  padding-left: 0;
   pointer-events: all;
   border-top-color: transparent;
   border-right-color: transparent;
