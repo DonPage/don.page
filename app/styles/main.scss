@@ -2,6 +2,9 @@
 @import "updatebrowser.scss";
 @import "colors.scss";
 
+$big-font: 89px;
+$font-break: 525px;
+
 * {
   user-select: none;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +23,7 @@ body {
 #canvas {
   position: fixed;
   z-index: 0;
-  cursor: url('https://upload.wikimedia.org/wikipedia/commons/2/27/SchWett_Kl_2a_black.svg'), crosshair;
+  cursor: crosshair;
 }
 
 h1.name {
@@ -28,15 +31,21 @@ h1.name {
   pointer-events: none;
   top: 2vh;
   z-index: 100;
-  font-size: 89px;
+  font-size: $big-font;
+  @media screen and (max-width: $font-break) {
+    font-size: $big-font - 31px;
+  }
 }
 
 h2.description {
   position: absolute;
   pointer-events: none;
   top: 21vh;
-  font-size: 55px;
+  font-size: $big-font - 31px;
   z-index: 100;
+  @media screen and (max-width: $font-break) {
+    font-size: $big-font - 55px;
+  }
 }
 
 input {
@@ -54,6 +63,7 @@ input {
   width: 90vw;
   z-index: 100;
   cursor: text !important;
+  -webkit-user-select: text;
   &:focus {
     outline: none;
   }
@@ -88,6 +98,9 @@ input {
     background: $main-text-color;
     color: $main-background-color;
     transition: .1s;
+  }
+  @media screen and (max-width: $font-break) {
+    font-size: 18px;
   }
 }
 
