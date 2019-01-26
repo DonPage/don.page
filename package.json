@@ -37,7 +37,7 @@
   "scripts": {
     "build:modernizr": "modernizr -c modernizr.json -d app/scripts/modernizr.js",
     "serve:test": "npm run build:modernizr && cross-env NODE_ENV=test gulp serve",
-    "serve:dist": "npm run build:modernizr && cross-env NODE_ENV=production gulp serve",
+    "serve:docs": "npm run build:modernizr && cross-env NODE_ENV=production gulp serve",
     "start": "npm run build:modernizr && gulp serve",
     "build": "cross-env NODE_ENV=production gulp",
     "test": "npm run serve:test",
